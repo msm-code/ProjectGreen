@@ -1,0 +1,43 @@
+﻿uniform vec3 lightPosition;
+uniform vec3 lightColor;
+uniform vec3 lightAttenuation;
+
+uniform sampler2D colorMap;  
+uniform sampler2D normalMap; 
+
+varying vec2 worldCoords;
+varying vec2 textureCoords;
+varying vec3 lightVec;
+varying vec3 eyeVec;
+  
+void main()
+{   
+    // 1. Extract the normal from the normal map  
+    vec3 normal = normalize(texture2D(normalMap, textureCoords).rgb * 2.0 - 1.0); 
+      
+    // 2. Determine where the light is positioned 
+    vec3 lightVecNorm = normalize(lightVec);  
+ 
+    // 3. Diffuse factor
+    float diffuse = max(dot(normal, lightVecNorm), 0.0);  
+
+    // 4. Specular factor
+    vec3 cameraView = normalize(eyeVec);
+    vec3 reflected = reflect(-lightVecNorm, normal);
+    float specular = pow(max(dot(reflected, cameraView), 0.0), 20.0);
+    
+    // 5. Calc pixel distance in world coords
+	vec3 aux = lightPosition - vec3(worldCoords, 0);
+	float distance = length(aux);
+	
+	// 6. Eval ettenuation function
+	float attenuation = 1.0 / (lightAttenuation.x + lightAttenuation.y * distance + lightAttenuation.z * distance * distance);	
+	
+	// 7. Sum light coefficients
+	float lightCoeff = (diffuse + specular) * attenuation;
+	
+	// 8. Get final color
+	vec3 color = lightCoeff * lightColor;	
+	//gl_FragColor = vec4(1, 0, 0, 1);
+	gl_FragColor = vec4(color, 1.0) * texture2D(colorMap, textureCoords);
+}

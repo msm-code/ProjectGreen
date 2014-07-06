@@ -1,0 +1,16 @@
+﻿uniform vec2 camPosition;
+uniform vec2 camSize;
+
+varying vec2 textureCoords;
+varying vec4 colorData;
+
+void main()
+{
+    colorData = gl_Color;
+    vec2 camView = camSize / vec2(2, 2);
+	textureCoords = gl_MultiTexCoord0.xy;
+    vec2 position = gl_Vertex.xy;
+    position -= camPosition;
+    position /= camView;
+    gl_Position = vec4(position, 0.0, 1.0);
+}

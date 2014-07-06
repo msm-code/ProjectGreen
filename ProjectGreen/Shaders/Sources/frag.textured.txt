@@ -1,0 +1,9 @@
+﻿uniform sampler2D colorMap;
+
+varying vec2 textureCoords;
+varying vec4 colorData;
+
+void main()
+{
+	gl_FragColor = texture(colorMap, textureCoords.xy) * colorData;
+}

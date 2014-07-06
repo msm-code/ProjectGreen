@@ -1,0 +1,17 @@
+﻿uniform vec2 lightPosition;
+uniform vec3 lightColor;
+uniform vec3 lightAttenuation;
+
+uniform sampler2D colorMap;
+
+varying vec2 worldCoords;
+varying vec2 textureCoords;
+
+void main()
+{
+	vec2 aux = lightPosition - worldCoords;
+	float distance = length(aux);
+	float attenuation = 1.0 / (lightAttenuation.x + lightAttenuation.y * distance + lightAttenuation.z * distance * distance);	
+	vec4 color = vec4(attenuation, attenuation, attenuation, 1.0) * vec4(lightColor, 1.0);	
+	gl_FragColor = color * texture(colorMap, textureCoords.xy);
+}

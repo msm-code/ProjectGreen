@@ -1,0 +1,19 @@
+﻿uniform sampler2D colorMap;
+uniform float totalTime;
+uniform float noiseStr;
+
+varying vec2 textureCoords;
+varying vec4 colorData;
+
+float rand(vec2 co)
+{ return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453); }
+
+void main()
+{
+    float r = rand(gl_FragCoord.xy * sin(totalTime    )) - 0.5;
+    float g = rand(gl_FragCoord.xy * sin(totalTime * 2)) - 0.5;
+    float b = rand(gl_FragCoord.xy * sin(totalTime * 3)) - 0.5;
+    
+    vec4 noise = vec4(r, g, b, 0) * noiseStr;
+	gl_FragColor = (texture(colorMap, textureCoords.xy) * colorData) + noise;
+}

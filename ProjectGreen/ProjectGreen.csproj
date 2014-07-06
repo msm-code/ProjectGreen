@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDD386C2-2E39-45F5-B017-288CD60CD956}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectGreen</RootNamespace>
+    <AssemblyName>ProjectGreen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="GameContent\SkeletalAnimationDecoder.cs" />
+    <Compile Include="GameContent\SkeletonDataDecoder.cs" />
+    <Compile Include="Game\ContactCountingSensor.cs" />
+    <Compile Include="Game\Render\PlayerDisplay.cs" />
+    <Compile Include="Game\ShapeUserData.cs" />
+    <Compile Include="Physic\RevoluteJointDefinition.cs" />
+    <Compile Include="Render\BlendMode.cs" />
+    <Compile Include="Render\Lights\SoftShadowRenderer.cs" />
+    <Compile Include="Render\TextureMode.cs" />
+    <Compile Include="Skeletal\Bone.cs" />
+    <Compile Include="Skeletal\SkeletalAnimation.cs" />
+    <Compile Include="Skeletal\SkeletonRenderer.cs" />
+    <Compile Include="Skeletal\Skeleton.cs" />
+    <Compile Include="Skeletal\SkeletonBody.cs" />
+    <Compile Include="Utils\ColorExt.cs" />
+    <Compile Include="Game\Campaing.cs" />
+    <Compile Include="ExitState.cs" />
+    <Compile Include="Game\Render\EnvironmentRenderer.cs" />
+    <Compile Include="Game\Render\IEnvironmentObject.cs" />
+    <Compile Include="Menu\PropertyAnimator.cs" />
+    <Compile Include="Physic\PolygonTriangulator.cs" />
+    <Compile Include="Render\ContextStack.cs" />
+    <Compile Include="Render\IVisual.cs" />
+    <Compile Include="GameContent\LevelDataDecoder.cs" />
+    <Compile Include="Render\Lights\DynamicLightBlender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\Lights\HardShadowRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\Lights\IShadowRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\Lights\PointLight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\Lights\QuadraticCurve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\Primitives.cs" />
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Menu\MenuState.cs" />
+    <Compile Include="Physic\Body.cs" />
+    <Compile Include="Physic\ContactEventArgs.cs" />
+    <Compile Include="Game\BodyUserData.cs" />
+    <Compile Include="Physic\BodyDefinition.cs" />
+    <Compile Include="Physic\ContactListener.cs" />
+    <Compile Include="Physic\ExtBox2.cs" />
+    <Compile Include="Game\Settings.cs" />
+    <Compile Include="GameContent\SettingsDecoder.cs" />
+    <Compile Include="Game\Render\SpriteDisplay.cs" />
+    <Compile Include="Physic\Polygon.cs" />
+    <Compile Include="Physic\Shape.cs" />
+    <Compile Include="Physic\ShapeDefinition.cs" />
+    <Compile Include="Render\RenderTarget.cs" />
+    <Compile Include="Render\Screen.cs" />
+    <Compile Include="Render\ShaderRepository.cs" />
+    <Compile Include="Render\Shaders\ShaderProgram.cs" />
+    <Compile Include="Render\SpriteBlend.cs" />
+    <Compile Include="Shaders\Programs\BumpedPointLightProgram.cs" />
+    <Compile Include="Shaders\Programs\ILightProgram.cs" />
+    <Compile Include="Shaders\Programs\TexturedNoiseProgram.cs" />
+    <Compile Include="Shaders\Programs\TexturedProgram.cs" />
+    <Compile Include="Render\Shaders\Uniform.cs" />
+    <Compile Include="Shaders\Programs\CameredProgram.cs" />
+    <Compile Include="Shaders\Programs\PointLightProgram.cs" />
+    <Compile Include="Shaders\Sources\ShaderSources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShaderSources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Skeletal\SkeletalAnimationData.cs" />
+    <Compile Include="Skeletal\BoneState.cs" />
+    <Compile Include="Skeletal\Keyframe.cs" />
+    <Compile Include="StateChangedEventArgs.cs" />
+    <Compile Include="Render\TextRenderer.cs" />
+    <Compile Include="GameContent\TextureAtlasDecoder.cs" />
+    <Compile Include="GameContent\TextureDecoder.cs" />
+    <Compile Include="Render\Camera.cs" />
+    <Compile Include="Utils\BoxExt.cs" />
+    <Compile Include="GameContent\Content.cs" />
+    <Compile Include="Utils\ListExt.cs" />
+    <Compile Include="GameContent\IContentDecoder.cs" />
+    <Compile Include="IGameState.cs" />
+    <Compile Include="Game\LevelData.cs" />
+    <Compile Include="Game\LevelState.cs" />
+    <Compile Include="Game\PlayerController.cs" />
+    <Compile Include="Render\RenderContext.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Render\Sprite.cs" />
+    <Compile Include="Render\Texture.cs" />
+    <Compile Include="Render\TextureAtlas.cs" />
+    <Compile Include="Utils\VectorExt.cs" />
+    <Compile Include="Physic\World.cs" />
+    <Compile Include="Utils\Matrix2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Box2CS, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\Libs\box2c-read-only\Box2CS\bin\Release\Box2CS.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="Poly2Tri, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\Libs\PolyToTri\bin\Debug\Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Shaders\Sources\frag.dynamic-light.txt" />
+    <Content Include="Shaders\Sources\frag.noised-textured.txt" />
+    <Content Include="Shaders\Sources\frag.textured.txt" />
+    <Content Include="Shaders\Sources\vert.bumped-dynamic-light.txt" />
+    <Content Include="Shaders\Sources\vert.camera2d.txt" />
+    <Content Include="Shaders\Sources\vert.dynamic-light.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Shaders\Sources\ShaderSources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ShaderSources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Shaders\Sources\frag.bumped-dynamic-light.txt" />
+  </ItemGroup>
+</Project>

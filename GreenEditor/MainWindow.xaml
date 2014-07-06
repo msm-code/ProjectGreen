@@ -1,0 +1,24 @@
+﻿<Window x:Class="GreenEditor.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:GreenEditor"
+    Title="GreenEditor" Height="700" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>       
+        <Menu Grid.Row="0" IsMainMenu="True">
+            <MenuItem Click="SaveData" Header="Save" />
+            <MenuItem Click="LoadData" Header="Load" />
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ListBox Grid.Row="1" Grid.Column="0" Name="commandListBox" />
+            <local:WorldDisplay Grid.Row="1" Grid.Column="1" Margin="5" x:Name="worldDisplay"/>
+        </Grid>
+    </Grid>
+</Window>

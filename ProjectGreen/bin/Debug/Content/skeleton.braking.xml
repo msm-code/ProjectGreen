@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation name="braking">
+  <keyframe time="0.2" translation="0.2523892">
+    <joint id="Trunk" rel-angle="4.76789045" />
+    <joint id="TorsoBottom" rel-angle="2.823105" />
+    <joint id="LeftLegTop" rel-angle="5.587536" />
+    <joint id="LeftLegBottom" rel-angle="0.379525334" />
+    <joint id="RightLegTop" rel-angle="0.158109218" />
+    <joint id="RightLegBottom" rel-angle="1.171095" />
+    <joint id="TorsoTop" rel-angle="6.266125" />
+    <joint id="RightArmTop" rel-angle="3.474689" />
+    <joint id="RightArmBottom" rel-angle="5.93186665" />
+    <joint id="LeftArmTop" rel-angle="2.53688836" />
+    <joint id="LeftArmBottom" rel-angle="5.86859846" />
+    <joint id="Neck" rel-angle="0.258132458" />
+  </keyframe>
+  <keyframe time="0.2" translation="0.2969848">
+    <joint id="Trunk" rel-angle="4.854285" />
+    <joint id="TorsoBottom" rel-angle="2.73671126" />
+    <joint id="LeftLegTop" rel-angle="5.68099976" />
+    <joint id="LeftLegBottom" rel-angle="0.36367777" />
+    <joint id="RightLegTop" rel-angle="0.5357987" />
+    <joint id="RightLegBottom" rel-angle="0.760768056" />
+    <joint id="TorsoTop" rel-angle="6.179727" />
+    <joint id="RightArmTop" rel-angle="3.523314" />
+    <joint id="RightArmBottom" rel-angle="5.964312" />
+    <joint id="LeftArmTop" rel-angle="2.60801053" />
+    <joint id="LeftArmBottom" rel-angle="6.077844" />
+    <joint id="Neck" rel-angle="0.4651477" />
+  </keyframe>
+</animation>

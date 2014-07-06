@@ -1,6 +1,7 @@
-bin/
-csx/
+# bin/ - we need those folders, ignore .exe instead
 obj/
+*.exe
+csx/
 rcf/
 .publishsettings
 *.suo

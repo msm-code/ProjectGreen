@@ -1,0 +1,16 @@
+<atlas texture="atlas">
+	<sprite id="player-left" start="0 0" size="0.2 0.16666" />
+	<sprite id="player-left2" start="0.2 0" size="0.2 0.16666" />
+	<sprite id="player-left3" start="0.4 0" size="0.2 0.16666" />
+	<sprite id="player-right" start="0 0.16666" size="0.2 0.16666" />
+	<sprite id="player-right2" start="0.2 0.16666" size="0.2 0.16666" />
+	<sprite id="player-right3" start="0.4 0.16666" size="0.2 0.16666" />
+	<sprite id="player-stand" start="0 0.33333" size="0.2 0.16666" />
+	<sprite id="player-stand2" start="0.2 0.33333" size="0.2 0.16666" />
+	<sprite id="solid" start="0.2 0.5" size="0.2 0.16666" />
+	<sprite id="cool" start="0.4 0.5" size="0.2 0.16666" />
+	
+	<animation id="player-left-anim" frame-time="0.2" frames="player-left, player-left2, player-left3" />
+	<animation id="player-right-anim" frame-time="0.2" frames="player-right, player-right2, player-right3" />
+	<animation id="player-stand-anim" frame-time="0.2" frames="player-stand, player-stand2" />
+</atlas>

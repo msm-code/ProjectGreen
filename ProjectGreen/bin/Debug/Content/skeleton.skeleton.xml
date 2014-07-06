@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<skeleton>
+  <joint name="Trunk" length="0">
+    <joint name="TorsoBottom" length="0.742000043">
+      <joint name="LeftLegTop" length="0.7929488">
+        <joint name="LeftLegBottom" length="0.8121204" />
+      </joint>
+      <joint name="RightLegTop" length="0.7612962">
+        <joint name="RightLegBottom" length="0.840116262" />
+      </joint>
+    </joint>
+    <joint name="TorsoTop" length="0.714000046">
+      <joint name="RightArmTop" length="0.619964838">
+        <joint name="RightArmBottom" length="0.658595" />
+      </joint>
+      <joint name="LeftArmTop" length="0.618857443">
+        <joint name="LeftArmBottom" length="0.6581484" />
+      </joint>
+      <joint name="Neck" length="0.364000022" />
+    </joint>
+  </joint>
+</skeleton>

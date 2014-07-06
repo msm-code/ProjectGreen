@@ -1,0 +1,7 @@
+<data-dict>
+	<item key="player::isStupid" value="true" /> <!-- unused in current version -->
+	<item key="display::fullscreened" value="false" />
+	<item key="display::dynamic-shadows" value="true" />
+	<item key="display::ambient-light" value="0" />
+	<item key="display::bump-map" value="true" />
+</data-dict>

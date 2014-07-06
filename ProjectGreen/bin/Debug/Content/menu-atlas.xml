@@ -1,0 +1,8 @@
+<atlas texture="menu-tex">
+	<sprite id="new-game" start="0 0.0" size="0.5 0.33333" />
+	<sprite id="continue-game" start="0 0.33333" size="0.5 0.33333" />
+	<sprite id="end-game" start="0 0.666666" size="0.5 0.33333" />
+	<sprite id="new-game-selected" start="0.5 0" size="0.5 0.33333" />
+	<sprite id="continue-game-selected" start="0.5 0.33333" size="0.5 0.33333" />
+	<sprite id="end-game-selected" start="0.5 0.666666" size="0.5 0.33333" />
+</atlas>
